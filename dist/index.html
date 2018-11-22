@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content=<?= "http://" . $_SERVER['HTTP_HOST'] . "/img/STALINBURG_COVER.png"?> />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+	<!--[if IE]><link rel="SHORTCUT ICON" href="favicon.ico"/><![endif]--><!-- Internet Explorer-->
+    <title>Сталинбург</title>
+</head>
+<body class="main-page-body">
+    <div class="preloader wrapper_red">
+        <h1 class="preloader__text-1">Сталинбург</h1>
+        <h2 class="preloader__text-2">
+            <div class="preloader__word preloader__word_1">книга,</div>
+            <div class="preloader__word preloader__word_2">которую</div>
+            <div class="preloader__word preloader__word_3">можно</div>
+            <div class="preloader__word preloader__word_4">прочитать</div>
+            <div class="preloader__word preloader__word_5">только в</div>
+            <div class="preloader__word preloader__word_6">интернете</div>
+        </h2>
+    </div>
+    <div class="wrapper">
+        <div class="moving-stars"></div>
+        <div class="pattern_bg wrapper_red"></div>
+        <div class="star">
+            <div class="main-content">
+                <a href="read.html" class="btn btn_left">читать</a>
+                <div class="cover">
+                    <a href="read.html">
+                        <img src="img/STALINBURG_COVER.png" alt="Stalinburg Book Cover">
+                    </a>
+                </div>
+                <div class="btn btn_right">
+                    <span class="download_text">Скачать</span> <a href="book/Stalinburg.pdf" download><span class="pdf">pdf</span></a> | <a href="book/Stalinburg.epub" download><span class="pdf"></span>epub</span></a>
+                </div>
+            </div>
+            <div class="bottom-line__container">
+                <div class="bottom-line">
+                    <p>Новая книга <span>Антона Фридлянда</span> – едкая сатирическая антиутопия, 
+                        действие которой происходит в современном СССР, последнем оплоте</p>
+                    <div class="holy">святости и правой веры</div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div>&#169; Антон Фридлянд, 2018</div>
+                <div class="footer__center">
+                    <a href="http://www.frid.land" target="_blank" rel="noopener noreferrer">www.frid.land</a>
+                </div>
+                <div>
+                    <a href="http://smartorange.com.ua/" target="_blank" rel="noopener noreferrer">Developed by SMART ORANGE</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        var pattern = document.querySelector('.pattern_bg');
+        var body = document.querySelector('body');
+        pattern.addEventListener('animationend', function() {
+            body.classList.add('show-content');
+        });
+    </script>
+</body>
+</html>
